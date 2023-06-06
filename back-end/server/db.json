@@ -1,0 +1,16 @@
+{
+    "course":[
+    {
+        "id":1,
+        "name":"Tamilselvan",
+        "dateofbirth":"14-09-1999",
+        "mailid":"tamil@gmail.com",
+        "phonenumber":87263728378,
+        "address":"kotagiri",
+        "qualification":"ME-bcs",
+        "passedout":2023,
+        "course":"fullstack development in mern",
+        "dateofjoining":"2 oct 2022"
+    }
+]
+}
