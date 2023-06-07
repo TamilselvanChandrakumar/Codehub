@@ -28,27 +28,35 @@ if(!name){
 }
 else if(!dob){
   setvalidationerror("Dob should not be empty")
+  return
 }
 else if(!mailid){
   setvalidationerror("mail should not be empty")
+  return
 }
 else if(!phonenumber){
   setvalidationerror("phonenumber should not be empty")
+  return
 }
 else if(!address){
   setvalidationerror("address should not be empty")
+  return
 }
 else if(!qualification){
   setvalidationerror("qualificaiton should not be empty")
+  return
 }
 else if(!passedout){
   setvalidationerror("passedout should not be empty")
+  return
 }
 else if(!coursed){
   setvalidationerror("course should not be empty")
+  return
 }
 else if(!dateofjoining){
   setvalidationerror("dateofjoining should not be empty")
+  return
 }
 setvalidationerror("")
   optiondata({name,dob,mailid,phonenumber,address,qualification,passedout,coursed,dateofjoining})

@@ -17,13 +17,10 @@ export const Usefetch=(url,method="GET")=>{
           },
         })
       }
-     else if(method==="PATCH"){
+     
+      else if(method==="DELETE"){
         setoption({
-          method:"PATCH",
-          body:JSON.stringify(data),
-          headers:{
-            "Content-type":"application/json;charset=UTF-8",
-          },
+          method:"DELETE",
         })
       }
     }
@@ -48,7 +45,7 @@ export const Usefetch=(url,method="GET")=>{
         if(method==="GET"){
           fetchcourse()
         }
-        else if((method==="POST" || method==="PATCH") && option){
+        else if((method==="POST" || method==="PATCH" || method==="DELETE") && option){
           fetchcourse(option)
         }
        

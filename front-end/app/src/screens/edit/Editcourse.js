@@ -20,10 +20,48 @@ export default function Editcourse() {
     const [show, setShow] = useState(false);
     const [validationerror, setvalidationerror] = useState('')
 
+    const [modifiedfield,setmodifiedfield]=useState('');
+     const onnamechange=(e)=>{
+        setname(e.target.value)
+        setmodifiedfield({...modifiedfield,name:e.target.value})
+     }
+     const ondobchange=(e)=>{
+        setdob(e.target.value)
+         setmodifiedfield({...modifiedfield,dob:e.target.value})
+     }
+     const onmailidchange=(e)=>{
+        setmailid(e.target.value)
+         setmodifiedfield({...modifiedfield,mailid:e.target.value})
+     }
+     const onphonenumberchange=(e)=>{
+        setphonenumber(e.target.value)
+         setmodifiedfield({...modifiedfield,phonenumber:e.target.value})
+     }
+     const onaddresschange=(e)=>{
+        setaddress(e.target.value)
+         setmodifiedfield({...modifiedfield,address:e.target.value})
+     }
+     const onqualificationchange=(e)=>{
+        setqualificaiton(e.target.value)
+         setmodifiedfield({...modifiedfield,qualification:e.target.value})
+     }
+
+     const onpassedoutchange=(e)=>{
+        setpassedout(e.target.value)
+         setmodifiedfield({...modifiedfield,passedout:e.target.value})
+     }
+     const oncoursedchange=(e)=>{
+        setcourse(e.target.value)
+         setmodifiedfield({...modifiedfield,coursed:e.target.value})
+     }
+     const ondateofjoiningchange=(e)=>{
+        setdateofjoining(e.target.value)
+         setmodifiedfield({...modifiedfield,dateofjoining:e.target.value})
+     }
     const navigate = useNavigate();
     const location = useLocation();
     const { state: course } = location;
-    console.log(course);
+    console.log(modifiedfield);
     const { data, error, optiondata } = Usefetch(` http://localhost:8000/course/${course.id}`, "PATCH")
 
     const handlesubmit = (e) => {
@@ -34,29 +72,38 @@ export default function Editcourse() {
         }
         else if (!dob) {
             setvalidationerror("Dob should not be empty")
+            return
         }
         else if (!mailid) {
             setvalidationerror("mail should not be empty")
+            return
         }
         else if (!phonenumber) {
             setvalidationerror("phonenumber should not be empty")
+            return
         }
         else if (!address) {
             setvalidationerror("address should not be empty")
+            return
         }
         else if (!qualification) {
             setvalidationerror("qualificaiton should not be empty")
+            return
         }
         else if (!passedout) {
             setvalidationerror("passedout should not be empty")
+            return
         }
         else if (!coursed) {
             setvalidationerror("course should not be empty")
+            return
         }
         else if (!dateofjoining) {
             setvalidationerror("dateofjoining should not be empty")
+            return
         }
         setvalidationerror("")
+        optiondata(modifiedfield)
 
     }
     useEffect(() => {
@@ -69,6 +116,7 @@ export default function Editcourse() {
         setpassedout(course.passedout);
         setcourse(course.coursed);
         setdateofjoining(course.dateofjoining);
+
         if (data.length !== 0) {
             setShow(true)
             const timer = setTimeout(() => navigate('/'), 3000);
@@ -78,44 +126,43 @@ export default function Editcourse() {
     }, [data,navigate,course.name,course.dob,course.mailid,course.phonenumber, course.address, course.qualification, course.passedout, course.coursed, course.dateofjoining]);
 
     return (
-        <>
             <Form onSubmit={handlesubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail" value={name} onChange={(e) => { setname(e.target.value) }} >
+                <Form.Group className="mb-3" controlId="formBasicEmail" value={name} onChange={onnamechange} >
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter name" />
+                    <Form.Control type="text" placeholder="Enter name"/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword" value={dob} onChange={(e) => { setdob(e.target.value) }}>
+                <Form.Group className="mb-3" controlId="formBasicPassword" value={dob} onChange={ondobchange}>
                     <Form.Label>Dateofbirth</Form.Label>
                     <Form.Control type="text" placeholder="dateofbirth" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail" value={mailid} onChange={(e) => { setmailid(e.target.value) }}>
+                <Form.Group className="mb-3" controlId="formBasicEmail" value={mailid} onChange={onmailidchange}>
                     <Form.Label>Mailid</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword" value={phonenumber} onChange={(e) => { setphonenumber(e.target.value) }}>
+                <Form.Group className="mb-3" controlId="formBasicPassword" value={phonenumber} onChange={onphonenumberchange}>
                     <Form.Label>Phonenumber</Form.Label>
                     <Form.Control type="number" placeholder="number" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword" value={address} onChange={(e) => { setaddress(e.target.value) }}>
+                <Form.Group className="mb-3" controlId="formBasicPassword" value={address} onChange={onaddresschange}>
                     <Form.Label>Address</Form.Label>
                     <Form.Control type="address" placeholder="address" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword" value={qualification} onChange={(e) => { setqualificaiton(e.target.value) }}>
+                <Form.Group className="mb-3" controlId="formBasicPassword" value={qualification} onChange={onqualificationchange}>
                     <Form.Label>Qualification</Form.Label>
                     <Form.Control type="text" placeholder="qualificaiton" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword" value={passedout} onChange={(e) => { setpassedout(e.target.value) }}>
+                <Form.Group className="mb-3" controlId="formBasicPassword" value={passedout} onChange={onpassedoutchange}>
                     <Form.Label>Passedout</Form.Label>
                     <Form.Control type="number" placeholder="passedout" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword" value={course} onChange={(e) => { setcourse(e.target.value) }}>
+                <Form.Group className="mb-3" controlId="formBasicPassword" value={course} onChange={oncoursedchange}>
                     <Form.Label>Course</Form.Label>
                     <Form.Control type="select" placeholder="course" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword" value={dateofjoining} onChange={(e) => { setdateofjoining(e.target.value) }}>
+                <Form.Group className="mb-3" controlId="formBasicPassword" value={dateofjoining} onChange={ondateofjoiningchange}>
                     <Form.Label>Dateofjoining</Form.Label>
                     <Form.Control type="text" placeholder="Dateofjoining" />
                 </Form.Group>
@@ -131,7 +178,7 @@ export default function Editcourse() {
                         <Modal.Header>
                             <Modal.Title></Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>Course Created Successfully!</Modal.Body>
+                        <Modal.Body>Course Edited Successfully!</Modal.Body>
                         <Modal.Footer>
                         </Modal.Footer>
                     </Modal>
@@ -142,9 +189,9 @@ export default function Editcourse() {
 
 
                 <Button variant="primary" type='submit'>
-                    Update
+                    Edit
                 </Button>
             </Form>
-        </>
+
     )
 }
