@@ -20,7 +20,7 @@ const navigate=useNavigate()
         <ListGroup.Item>Address:{course.address}</ListGroup.Item>
         <ListGroup.Item>Qualification:{course.qualification}</ListGroup.Item>
         <ListGroup.Item>Passedout:{course.passedout}</ListGroup.Item>
-        <ListGroup.Item>Course:{course.course}</ListGroup.Item>
+        <ListGroup.Item>Course:{course.coursed}</ListGroup.Item>
         <ListGroup.Item>Dateofjoining:{course.dateofjoining}</ListGroup.Item>
       </ListGroup>
     </Card>

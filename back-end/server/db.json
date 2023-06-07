@@ -1,16 +1,160 @@
 {
-    "course":[
+  "course": [
     {
-        "id":1,
-        "name":"Tamilselvan",
-        "dateofbirth":"14-09-1999",
-        "mailid":"tamil@gmail.com",
-        "phonenumber":87263728378,
-        "address":"kotagiri",
-        "qualification":"ME-bcs",
-        "passedout":2023,
-        "course":"fullstack development in mern",
-        "dateofjoining":"2 oct 2022"
+      "id": 1,
+      "name": "Tamilselvan",
+      "dateofbirth": "14-09-1999",
+      "mailid": "tamil@gmail.com",
+      "phonenumber": 87263728378,
+      "address": "kotagiri",
+      "qualification": "ME-bcs",
+      "passedout": 2023,
+      "coursed": "fullstack development in mern",
+      "dateofjoining": "2 oct 2022"
+    },
+    {
+      "name": "tamil",
+      "dob": "complelted",
+      "mailid": "abc@gmail.com",
+      "phonenumber": "123",
+      "address": "gf",
+      "qualification": "fff",
+      "passedout": "2021",
+      "coursed": "react",
+      "dateofjoining": "23",
+      "id": 2
+    },
+    {
+      "name": "Nandha",
+      "dob": "12-12-2000",
+      "mailid": "nandhakumar@gmail.com",
+      "phonenumber": "1234567",
+      "address": "Gobichettipalayam",
+      "qualification": "ME",
+      "passedout": "2021",
+      "coursed": "React js ",
+      "dateofjoining": "12-12-12",
+      "id": 3
+    },
+    {
+      "name": "tamil",
+      "dob": "complelted",
+      "mailid": "tamil@gmail.com",
+      "phonenumber": "123",
+      "address": "complelted",
+      "qualification": "task description updated",
+      "passedout": "12",
+      "coursed": "task description updated",
+      "dateofjoining": "12",
+      "id": 4
+    },
+    {
+      "name": "tamil",
+      "dob": "76",
+      "mailid": "tamil@gmail.com",
+      "phonenumber": "456",
+      "address": "gobi",
+      "qualification": "bcs",
+      "passedout": "21",
+      "coursed": "react",
+      "dateofjoining": "34",
+      "id": 5
+    },
+    {
+      "name": "tamil",
+      "dob": "12",
+      "mailid": "tamil@gmail.com",
+      "phonenumber": "12",
+      "address": "gobi",
+      "qualification": "bcs",
+      "passedout": "21",
+      "coursed": "react",
+      "dateofjoining": "22",
+      "id": 6
+    },
+    {
+      "name": "tamil",
+      "dob": "12",
+      "mailid": "tamil@gmail.com",
+      "phonenumber": "12344",
+      "address": "kota",
+      "qualification": "",
+      "passedout": "",
+      "coursed": "",
+      "dateofjoining": "",
+      "id": 7
+    },
+    {
+      "name": "nandha",
+      "dob": "12",
+      "mailid": "nandha@gmail.com",
+      "phonenumber": "1234",
+      "address": "gibi",
+      "qualification": "ME",
+      "passedout": "21",
+      "coursed": "react",
+      "dateofjoining": "12",
+      "id": 8
+    },
+    {
+      "name": "tamil",
+      "dob": "12",
+      "mailid": "tamil@gmail.com",
+      "phonenumber": "1234",
+      "address": "gobi",
+      "qualification": "bcs",
+      "passedout": "2021",
+      "coursed": "react",
+      "dateofjoining": "12-12-2000",
+      "id": 9
+    },
+    {
+      "name": "tamil",
+      "dob": "12",
+      "mailid": "tamil@gmail.com",
+      "phonenumber": "123",
+      "address": "gobi",
+      "qualification": "bcs",
+      "passedout": "2021",
+      "coursed": "react",
+      "dateofjoining": "12",
+      "id": 10
+    },
+    {
+      "name": "tamil",
+      "dob": "12",
+      "mailid": "tmail@gmail.com",
+      "phonenumber": "1234",
+      "address": "gobi",
+      "qualification": "me",
+      "passedout": "21",
+      "coursed": "react",
+      "dateofjoining": "23",
+      "id": 11
+    },
+    {
+      "name": "tamil",
+      "dob": "12",
+      "mailid": "tamil@gmail.com",
+      "phonenumber": "12",
+      "address": "gobi",
+      "qualification": "me",
+      "passedout": "21",
+      "coursed": "react",
+      "dateofjoining": "23",
+      "id": 12
+    },
+    {
+      "name": "tamil",
+      "dob": "12",
+      "mailid": "tmail@gmail.com",
+      "phonenumber": "12",
+      "address": "ooty",
+      "qualification": "bcs",
+      "passedout": "12",
+      "coursed": "react",
+      "dateofjoining": "12",
+      "id": 13
     }
-]
+  ]
 }

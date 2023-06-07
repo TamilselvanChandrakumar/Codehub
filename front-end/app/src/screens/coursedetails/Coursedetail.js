@@ -1,25 +1,29 @@
-import React from 'react'
-import './Coursedetail.css'
-import { useLocation } from 'react-router-dom'
+import React from 'react';
+import './Coursedetail.css';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 export default function Coursedetail() {
 
 const location=useLocation();
-const {state}=location;
-console.log(state);
+const {state:course}=location;
+
+const navigate=useNavigate()
+const handleedit=()=>{
+navigate(`/edit/${course.id}`,{state:course})
+}
 
   return (
     <>
     <Card style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>{state.name}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{state.qualification}</Card.Subtitle>
+        <Card.Title>{course.name}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">{course.qualification}</Card.Subtitle>
         <Card.Text>
-             {state.course} passedout-{state.passedout}
+             {course.coursed} passedout-{course.passedout}
         </Card.Text>
         <div className='button'>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" onClick={handleedit}>
         Edit
       </Button>
       <Button variant="primary" type="submit">
