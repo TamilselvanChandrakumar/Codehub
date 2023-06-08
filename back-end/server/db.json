@@ -1,3 +1,28 @@
 {
-  "course": []
+  "course": [
+    {
+      "name": "Tamilselvan",
+      "dob": "00-00-00",
+      "mailid": "abc@gmail.com",
+      "phonenumber": "8000000000",
+      "address": "kotagiri",
+      "qualification": "ME",
+      "passedout": "2021",
+      "coursed": "mern stack developer",
+      "dateofjoining": "12-12-2000",
+      "id": 1
+    },
+    {
+      "name": "Nandha",
+      "dob": "12-12-2000",
+      "mailid": "nandha@gmail.com",
+      "phonenumber": "500000000",
+      "address": "Gobichettipalayam",
+      "qualification": "ME",
+      "passedout": "2022",
+      "coursed": "Reactjs ",
+      "dateofjoining": "10-10-2022",
+      "id": 2
+    }
+  ]
 }

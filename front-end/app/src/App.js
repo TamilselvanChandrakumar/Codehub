@@ -5,12 +5,16 @@ import Createcourse from './screens/create/Createcourse';
 import Editcourse from './screens/edit/Editcourse';
 import Home from './screens/home/Home';
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import Themeswitch from './switch/Themeswitch';
+
 
 function App() {
+  
   return (
-    <>
+    <div >
   <BrowserRouter>
   <Navbar/>
+  <Themeswitch/>
   <Routes> 
   <Route path="/" element={<Home/>}></Route>
   <Route path="/create" element={<Createcourse/>}></Route>
@@ -19,7 +23,7 @@ function App() {
 
   </Routes>
   </BrowserRouter>
-  </> 
+  </div> 
   );
 }
 

@@ -1,6 +1,7 @@
 
 import Course from '../course/Course';
 import { Usefetch } from '../../hooks/Usefetch';
+import './Home.css'
 
 
 export default function Home() {
@@ -10,11 +11,13 @@ export default function Home() {
 
   return (
     <>
+    <div className='details'>
       {
         course && course.map((course)=>{
           return <Course course={course} key={course.id}/>
         })
       }
+      </div>
       {
        error && <h3>{error}</h3>
 
